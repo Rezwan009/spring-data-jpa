@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: Spring Boot JPA
+  datasource:
+    url: jdbc:postgresql://localhost:5432/data_jpa
+    username: postgres
+    password: rezocoding
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    database: POSTGRESQL
+    show-sql: true
+    hibernate:
+      ddl-auto: 'create-drop'
+
