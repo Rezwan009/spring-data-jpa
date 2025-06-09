@@ -1,20 +1,19 @@
 package com.rezocoding.jpa.entites;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.experimental.SuperBuilder;
+import java.util.List;
 
-import java.time.LocalDateTime;
 
 @Data
 @NoArgsConstructor
+@AllArgsConstructor
+@SuperBuilder
 @Entity
-@Table(name = "AUTHOR_TBL")
-public class Author {
-
-    @Id
-    @GeneratedValue
-    private Integer id;
+public class Author extends BaseEntity{
 
     @Column(
             name = "f_name",
@@ -36,10 +35,6 @@ public class Author {
 
     private int age;
 
-    @Column(name = "created_at", updatable = false,nullable = false)
-    private LocalDateTime createdAt;
-
-    @Column(name = "updated_at",insertable = false)
-    private LocalDateTime updatedAt;
-
+    @ManyToMany(mappedBy = "authors")
+    private List<Course> courses;
 }
