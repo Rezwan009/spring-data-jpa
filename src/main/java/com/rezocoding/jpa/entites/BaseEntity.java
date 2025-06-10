@@ -25,9 +25,15 @@ public class BaseEntity {
     @Column(columnDefinition = "BOOLEAN DEFAULT TRUE")
     private boolean status;
 
-    @Column(name = "created_at", updatable = false,nullable = false)
+    @Column(name = "created_at", updatable = false, nullable = false)
     private LocalDateTime createdAt;
 
-    @Column(name = "updated_at",insertable = false)
+    @Column(name = "updated_at", insertable = false)
     private LocalDateTime updatedAt;
+
+    @Column(name = "created_by",updatable = false, nullable = false)
+    private String createdBy;
+
+    @Column(name = "updated_by", insertable = false)
+    private String updatedBy;
 }

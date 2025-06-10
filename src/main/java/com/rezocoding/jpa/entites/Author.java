@@ -1,11 +1,16 @@
 package com.rezocoding.jpa.entites;
 
-import jakarta.persistence.*;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.ManyToMany;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.experimental.SuperBuilder;
+import org.hibernate.proxy.HibernateProxy;
+
 import java.util.List;
+import java.util.Objects;
 
 
 @Data

@@ -7,13 +7,17 @@ import jakarta.persistence.OneToMany;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.experimental.SuperBuilder;
+import org.hibernate.proxy.HibernateProxy;
 
 import java.util.List;
+import java.util.Objects;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
+@SuperBuilder
 public class Section extends BaseEntity{
 
     private String name;
@@ -26,4 +30,5 @@ public class Section extends BaseEntity{
 
     @OneToMany(mappedBy = "section")
     private List<Lecture> lectures;
+
 }
