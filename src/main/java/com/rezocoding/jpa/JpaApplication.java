@@ -43,11 +43,9 @@ public class JpaApplication {
 					.build();
 			videoRepository.save(video);*/
 
-//			authorRepository.updateAuthor(27,1);
-
-
-//			authorRepository.findByNamedQuery(27).forEach(System.out::println);
-//			authorRepository.updateByNamedQuery(27);
+			//  authorRepository.updateAuthor(27,1);
+			//  authorRepository.findByNamedQuery(27).forEach(System.out::println);
+			//	authorRepository.updateByNamedQuery(27);
 
 			Specification<Author> spec = Specification
 					.where(AuthorSpecification.hasAge(22))
