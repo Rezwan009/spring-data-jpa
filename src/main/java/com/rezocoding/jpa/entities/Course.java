@@ -1,4 +1,4 @@
-package com.rezocoding.jpa.entites;
+package com.rezocoding.jpa.entities;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

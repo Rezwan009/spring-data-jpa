@@ -1,6 +1,6 @@
 package com.rezocoding.jpa.specification;
 
-import com.rezocoding.jpa.entites.Author;
+import com.rezocoding.jpa.entities.Author;
 import jakarta.persistence.criteria.CriteriaBuilder;
 import jakarta.persistence.criteria.CriteriaQuery;
 import jakarta.persistence.criteria.Root;

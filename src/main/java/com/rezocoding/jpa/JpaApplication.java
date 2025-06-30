@@ -1,15 +1,13 @@
 package com.rezocoding.jpa;
 
 import com.github.javafaker.Faker;
-import com.rezocoding.jpa.entites.Author;
+import com.rezocoding.jpa.entities.Author;
 import com.rezocoding.jpa.repositories.AuthorRepository;
 import com.rezocoding.jpa.repositories.VideoRepository;
-import com.rezocoding.jpa.specification.AuthorSpecification;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.Bean;
-import org.springframework.data.jpa.domain.Specification;
+
 
 import java.time.LocalDateTime;
 
@@ -20,7 +18,7 @@ public class JpaApplication {
 		SpringApplication.run(JpaApplication.class, args);
 	}
 
-	@Bean
+	//@Bean
 	public CommandLineRunner commandLineRunner(AuthorRepository authorRepository, VideoRepository videoRepository){
 		return args -> {
             for (int i = 0; i<50; i++) {
@@ -47,10 +45,10 @@ public class JpaApplication {
 			//  authorRepository.findByNamedQuery(27).forEach(System.out::println);
 			//	authorRepository.updateByNamedQuery(27);
 
-			Specification<Author> spec = Specification
-					.where(AuthorSpecification.hasAge(22))
-					.or(AuthorSpecification.firstnameLike("Bu"));
-			authorRepository.findAll(spec).forEach(System.out::println);
+//			Specification<Author> spec = Specification
+//					.where(AuthorSpecification.hasAge(22))
+//					.or(AuthorSpecification.firstnameLike("Bu"));
+//			authorRepository.findAll(spec).forEach(System.out::println);
 		};
 	}
 

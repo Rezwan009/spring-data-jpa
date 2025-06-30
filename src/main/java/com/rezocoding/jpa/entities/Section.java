@@ -1,31 +1,32 @@
-package com.rezocoding.jpa.entites;
+package com.rezocoding.jpa.entities;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
-import jakarta.persistence.OneToOne;
+import jakarta.persistence.OneToMany;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.experimental.SuperBuilder;
-import org.hibernate.proxy.HibernateProxy;
 
-import java.util.Objects;
+import java.util.List;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
 @SuperBuilder
-public class Lecture extends BaseEntity{
+public class Section extends BaseEntity{
 
     private String name;
 
-    @ManyToOne
-    @JoinColumn(name = "section_id")
-    private Section section;
+    private int sectionOrder;
 
-    @OneToOne
-    @JoinColumn(name = "resource_id")
-    private Resource resource;
+    @ManyToOne
+    @JoinColumn(name = "course_id")
+    private Course course;
+
+    @OneToMany(mappedBy = "section")
+    private List<Lecture> lectures;
+
 }

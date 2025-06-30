@@ -1,6 +1,6 @@
 package com.rezocoding.jpa.repositories;
 
-import com.rezocoding.jpa.entites.Author;
+import com.rezocoding.jpa.entities.Author;
 import jakarta.transaction.Transactional;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;

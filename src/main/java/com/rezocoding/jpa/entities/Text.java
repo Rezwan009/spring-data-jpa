@@ -1,4 +1,4 @@
-package com.rezocoding.jpa.entites;
+package com.rezocoding.jpa.entities;
 
 import jakarta.persistence.DiscriminatorValue;
 import jakarta.persistence.Entity;
@@ -12,7 +12,8 @@ import lombok.experimental.SuperBuilder;
 @AllArgsConstructor
 @Entity
 @SuperBuilder
-@DiscriminatorValue(value = "F")
-public class File extends Resource{
-    private String type;
+@DiscriminatorValue(value = "T")
+public class Text extends Resource {
+
+    private String content;
 }

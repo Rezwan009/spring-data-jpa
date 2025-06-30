@@ -1,6 +1,5 @@
-package com.rezocoding.jpa.entites;
+package com.rezocoding.jpa.entities;
 
-import jakarta.persistence.DiscriminatorColumn;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Inheritance;
 import jakarta.persistence.InheritanceType;
@@ -8,9 +7,6 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.experimental.SuperBuilder;
-import org.hibernate.proxy.HibernateProxy;
-
-import java.util.Objects;
 
 @Data
 @NoArgsConstructor

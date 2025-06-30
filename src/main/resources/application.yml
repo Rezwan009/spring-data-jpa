@@ -2,7 +2,7 @@ spring:
   application:
     name: Spring Boot JPA
   datasource:
-    url: jdbc:postgresql://localhost:5434/data_jpa
+    jdbcUrl: jdbc:postgresql://localhost:5434/data_jpa
     username: postgres
     password: postgres
     driver-class-name: org.postgresql.Driver
@@ -13,4 +13,9 @@ spring:
       ddl-auto: update
     properties:
       hibernate:
-        format_sql:true
+        format_sql: true
+app:
+  db2:
+    jdbcUrl: jdbc:postgresql://localhost:5434/data_jpa_2
+    username: postgres
+    password: postgres

@@ -1,4 +1,4 @@
-package com.rezocoding.jpa.entites.embedded;
+package com.rezocoding.jpa.entities.embedded;
 
 import jakarta.persistence.Embeddable;
 import lombok.AllArgsConstructor;
